@@ -1,0 +1,23 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 20px;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+  color: #fff;
+
+  nav {
+    display: flex;
+
+    li {
+      list-style-type: none;
+      padding-left: 15px;
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
