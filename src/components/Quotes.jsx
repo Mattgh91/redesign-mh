@@ -13,7 +13,6 @@ class Quotes extends Component {
         super(props);
 
         this.quotes = React.createRef();
-        this.quote = React.createRef();
 
         this.state = {
             quoteVisible: false,
@@ -42,7 +41,7 @@ class Quotes extends Component {
             <section className="quotes" ref={this.quotes}>
                 <QuoteContainer pose={quoteVisible ? 'visible' : 'hidden'} initialPose="hidden">
                     {quoteArr.map((quote, idx) =>
-                        <Quote key={idx} ref={this.quote} >
+                        <Quote key={idx}>
                             {quote}
                         </Quote>
                     )}

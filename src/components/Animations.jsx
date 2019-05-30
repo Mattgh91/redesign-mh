@@ -1,5 +1,25 @@
 import posed from 'react-pose';
 
+const HeaderContainer = posed.header({
+    notScrolled: {
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        boxShadow: '0 0 0px rgba(0, 0, 0, 0)',
+    },
+    scrolled: {
+        backgroundColor: 'rgba(255, 255, 255, 1)',
+        boxShadow: '0 2px 5px rgba(0, 0, 0, 0.26)',
+    },
+});
+
+const HeaderItem = posed.a({
+    notScrolled: {
+        color: '#fff',
+    },
+    scrolled: {
+        color: '#0aa7d8',
+    },
+});
+
 const Box = posed.div({
     hidden: {
         opacity: 0,
@@ -39,8 +59,14 @@ const QuoteContainer = posed.div({
     },
 });
 
-const Quote = posed.p({
+const Quote = posed.h3({
 
 });
 
-export { Box, QuoteContainer, Quote };
+export {
+    HeaderContainer,
+    HeaderItem,
+    Box,
+    QuoteContainer,
+    Quote
+};
