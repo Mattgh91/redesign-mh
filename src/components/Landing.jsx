@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/landing.scss';
-import Box from './Animations.jsx';
+import { Box } from './Animations.jsx';
 
 class Landing extends Component {
     constructor(props) {

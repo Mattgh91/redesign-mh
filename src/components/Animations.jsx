@@ -20,4 +20,27 @@ const Box = posed.div({
     draggable: true,
 });
 
-export default Box ;
+const QuoteContainer = posed.div({
+    hidden: {
+        opacity: 0,
+        scale: 0,
+        transition: {
+            duration: 650,
+            delay: 150,
+        },
+    },
+    visible: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+            duration: 650,
+            delay: 150,
+        },
+    },
+});
+
+const Quote = posed.p({
+
+});
+
+export { Box, QuoteContainer, Quote };
