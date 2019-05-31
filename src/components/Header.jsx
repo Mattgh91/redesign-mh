@@ -6,6 +6,7 @@ const scrollFunc = param => {
     const scrollToThis = document.querySelector(`.${param}`);
     scrollToThis.scrollIntoView({
         behavior: 'smooth',
+        block: 'center',
     });
 };
 

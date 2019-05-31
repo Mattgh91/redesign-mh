@@ -46,7 +46,7 @@ const QuoteContainer = posed.div({
         scale: 0,
         transition: {
             duration: 650,
-            delay: 150,
+            delay: 50,
         },
     },
     visible: {
@@ -54,7 +54,7 @@ const QuoteContainer = posed.div({
         scale: 1,
         transition: {
             duration: 650,
-            delay: 150,
+            delay: 50,
         },
     },
 });
