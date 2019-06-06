@@ -5,6 +5,7 @@ import AboutMe from './components/AboutMe.jsx';
 import Quotes from './components/Quotes.jsx';
 import Projects from './components/Projects.jsx';
 import Contact from './components/Contact.jsx';
+import Footer from './components/Footer.jsx';
 import './App.css';
 
 const App = () => (
@@ -17,6 +18,7 @@ const App = () => (
             <Projects />
             <Contact />
         </main>
+        <Footer />
     </div>
 );
 
