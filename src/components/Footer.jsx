@@ -11,13 +11,15 @@ const socialIcons = [
 
 const Footer = () => (
     <footer>
-        {socialIcons.map(socialIcon => {
-            return (
-                <a href={socialIcon.link} target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={socialIcon.iconName} />
-                </a>
-            );
-        })}
+        <nav id="footerNav" className="footer-nav">
+            {socialIcons.map(socialIcon => {
+                return (
+                    <a href={socialIcon.link} target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={socialIcon.iconName} />
+                    </a>
+                );
+            })}
+        </nav>
     </footer>
 );
 

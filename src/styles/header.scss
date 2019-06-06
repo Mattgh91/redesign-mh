@@ -1,3 +1,5 @@
+@import './_variables.scss';
+
 header {
     display: flex;
     justify-content: space-between;
@@ -49,7 +51,7 @@ header {
     &.scrolled {
         a {
             &:after {
-                background: rgb(10, 167, 216);
+                background: $blue;
             }
         }
     }
