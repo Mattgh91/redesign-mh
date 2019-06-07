@@ -37,17 +37,19 @@ class Header extends Component {
         const { isScrolled } = this.state;
         return (
             <HeaderContainer pose={isScrolled ? 'scrolled' : 'notScrolled'} className={isScrolled ? 'scrolled' : 'notScrolled'}>
-                <HeaderItem onClick={() => scrollFunc('landing')} className="logo">Matt Haynes</HeaderItem>
+                <HeaderItem href="#/" onClick={() => scrollFunc('landing')} className="logo">Matt Haynes</HeaderItem>
                 <nav>
-                    <li>
-                        <HeaderItem href="#quotes" onClick={() => scrollFunc('about-me')}>About Me</HeaderItem>
-                    </li>
-                    <li>
-                        <HeaderItem href="#my-projects" onClick={() => scrollFunc('projects')}>My Projects</HeaderItem>
-                    </li>
-                    <li>
-                        <HeaderItem href="#contact" onClick={() => scrollFunc('contact')}>Contact</HeaderItem>
-                    </li>
+                    <ul>
+                        <li>
+                            <HeaderItem href="#quotes" onClick={() => scrollFunc('about-me')}>About Me</HeaderItem>
+                        </li>
+                        <li>
+                            <HeaderItem href="#my-projects" onClick={() => scrollFunc('projects')}>My Projects</HeaderItem>
+                        </li>
+                        <li>
+                            <HeaderItem href="#contact" onClick={() => scrollFunc('contact')}>Contact</HeaderItem>
+                        </li>
+                    </ul>
                 </nav>
             </HeaderContainer>
         )

@@ -16,7 +16,7 @@ const HeaderItem = posed.a({
         color: '#fff',
     },
     scrolled: {
-        color: '#0aa7d8',
+        color: '#0980A5',
     },
 });
 
@@ -37,7 +37,6 @@ const Box = posed.div({
             delay: 500,
         },
     },
-    draggable: true,
 });
 
 const QuoteContainer = posed.div({

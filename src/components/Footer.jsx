@@ -4,9 +4,9 @@ import { faLinkedinIn, faFreeCodeCamp, faCodepen } from '@fortawesome/free-brand
 import '../styles/footer.scss';
 
 const socialIcons = [
-    { iconName: faFreeCodeCamp, link: 'https://www.freecodecamp.org/mattgh91/' },
-    { iconName: faCodepen, link: 'https://codepen.io/Mattgh9152/' },
-    { iconName: faLinkedinIn, link: 'https://www.linkedin.com/in/matt-haynes-43ba20a0/' },
+    { iconName: faFreeCodeCamp, link: 'https://www.freecodecamp.org/mattgh91/', text: 'Free Code Camp', id: 1 },
+    { iconName: faCodepen, link: 'https://codepen.io/Mattgh9152/', text: 'Code Pen', id: 2 },
+    { iconName: faLinkedinIn, link: 'https://www.linkedin.com/in/matt-haynes-43ba20a0/', text: 'LinkedIn', id: 3 },
 ];
 
 const Footer = () => (
@@ -14,8 +14,9 @@ const Footer = () => (
         <nav id="footerNav" className="footer-nav">
             {socialIcons.map(socialIcon => {
                 return (
-                    <a href={socialIcon.link} target="_blank" rel="noopener noreferrer">
+                    <a href={socialIcon.link} target="_blank" rel="noopener noreferrer" key={socialIcon.id}>
                         <FontAwesomeIcon icon={socialIcon.iconName} />
+                        <span className="vh">{socialIcon.text}</span>
                     </a>
                 );
             })}
