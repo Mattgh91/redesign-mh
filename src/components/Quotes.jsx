@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons'
 import { QuoteContainer, Quote } from './Animations.jsx';
 import '../styles/quotes.scss';
 
 const quoteArr = [
     // 'Make every detail perfect and limit the number of details to perfect.',
     // 'The problem with quotes on the Internet is that it is hard to verify their authenticity.',
-    'The Web as I envisaged it, we have not seen it yet. The future is still so much bigger than the past.',
+    {
+        quoteText: 'The Web as I envisaged it, we have not seen it yet. The future is still so much bigger than the past.',
+        quoteAuthor: 'Tim Berners-Lee',
+        id: 1,
+    }
 ];
 
 class Quotes extends Component {
@@ -41,9 +47,14 @@ class Quotes extends Component {
             <section className="quotes" ref={this.quotes}>
                 <QuoteContainer pose={quoteVisible ? 'visible' : 'hidden'} initialPose="hidden">
                     {quoteArr.map((quote, idx) =>
-                        <Quote key={idx}>
-                            {quote}
-                        </Quote>
+                        <div key={quote.id}>
+                            <Quote key={idx}>
+                                <FontAwesomeIcon icon={faQuoteLeft} className="quotes__quote quotes__quote_left" />
+                                {quote.quoteText}
+                                <FontAwesomeIcon icon={faQuoteRight} className="quotes__quote quotes__quote_right" />
+                            </Quote>
+                            <span>{quote.quoteAuthor}</span>
+                        </div>
                     )}
                 </QuoteContainer>
             </section>

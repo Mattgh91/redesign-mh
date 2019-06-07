@@ -44,7 +44,7 @@ class Header extends Component {
                             <HeaderItem href="#quotes" onClick={() => scrollFunc('about-me')}>About Me</HeaderItem>
                         </li>
                         <li>
-                            <HeaderItem href="#my-projects" onClick={() => scrollFunc('projects')}>My Projects</HeaderItem>
+                            <HeaderItem href="#my-projects" onClick={() => scrollFunc('clients')}>My Work</HeaderItem>
                         </li>
                         <li>
                             <HeaderItem href="#contact" onClick={() => scrollFunc('contact')}>Contact</HeaderItem>

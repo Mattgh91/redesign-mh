@@ -3,10 +3,10 @@ import Header from './components/Header.jsx';
 import Landing from './components/Landing.jsx';
 import AboutMe from './components/AboutMe.jsx';
 import Quotes from './components/Quotes.jsx';
-import Projects from './components/Projects.jsx';
+import Clients from './components/Clients.jsx';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
-import './App.css';
+import './App.scss';
 
 const App = () => (
     <div className="App">
@@ -15,7 +15,7 @@ const App = () => (
             <Landing />
             <AboutMe />
             <Quotes />
-            <Projects />
+            <Clients />
             <Contact />
         </main>
         <Footer />

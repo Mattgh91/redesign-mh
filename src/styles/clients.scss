@@ -1,0 +1,14 @@
+@import './_variables.scss';
+
+.clients {
+    background: $blue;
+    color: #fff;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        max-width: 768px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+}

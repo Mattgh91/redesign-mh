@@ -30,8 +30,11 @@ header {
         color: #fff;
         font-size: 18px;
         text-decoration: none;
-        padding-left: 20px;
         position: relative;
+
+        &:not(.logo) {
+            padding-left: 20px;
+        }
 
         &:after {
             content: '';
