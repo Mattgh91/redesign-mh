@@ -3,6 +3,9 @@
 .clients {
     background: $blue;
     color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.26) 0 2px 5px;
+    position: relative;
+
 
     &__list {
         display: flex;
@@ -10,5 +13,9 @@
         max-width: 768px;
         margin: 0 auto;
         padding: 0 20px;
+    }
+
+    &__client {
+        display: inline-block;
     }
 }

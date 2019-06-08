@@ -62,10 +62,31 @@ const Quote = posed.h3({
 
 });
 
+const ClientItem = posed.img({
+    init: {
+        opacity: 0,
+    },
+    scrolledIntoView: {
+        opacity: 1,
+        transition: ({ i }) => ({
+            duration: 350,
+            delay: i * 200,
+        }),
+    },
+    notInView: {
+        opacity: 0,
+        transition: {
+            duration: 350,
+        },
+    },
+    props: { i: 0 },
+});
+
 export {
     HeaderContainer,
     HeaderItem,
     Box,
     QuoteContainer,
-    Quote
+    Quote,
+    ClientItem
 };
