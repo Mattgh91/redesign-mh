@@ -31,7 +31,7 @@ class Landing extends Component {
                 />
                 <Box pose={isVisible ? 'visible' : 'hidden'}>
                     <h1>Matt Haynes</h1>
-                    <h2>A passionate web developer and designer; helping fill the internet with beautiful websites one page at a time</h2>
+                    <h2>A passionate front end web developer and designer; helping fill the internet with beautiful websites one page at a time</h2>
                 </Box>
             </section>
         );

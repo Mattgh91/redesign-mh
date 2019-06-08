@@ -4,12 +4,6 @@ import '../styles/contact.scss';
 const Contact = () => (
     <section className="contact">
         <h3>Contact</h3>
-        <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
-            <input type="text" name="name" />
-            <input type="email" name="email" />
-            <textarea name="message"> </textarea>
-        </form>
-
         <form method="post">
             <input type="hidden" name="form-name" value="contact" />
             <p>

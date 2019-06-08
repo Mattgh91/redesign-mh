@@ -36,7 +36,7 @@ const Slider = ({ slides }) => {
                             {s.title}
                             <FontAwesomeIcon icon={faQuoteRight} className="slider__quote slider__quote_right" />
                         </h3>
-                        <h4>{s.subtitle}</h4>
+                        <h4>- {s.subtitle}</h4>
                     </div>
                 </div>
             ))}
