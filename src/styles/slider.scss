@@ -1,40 +1,70 @@
-body {
-    margin: 0;
-}
-
 .slider {
-    position: relative;
-    height: 80vh;
-}
-
-.slide {
-    position: absolute;
-    top: 0;
-    left: 0;
+    background: linear-gradient(
+                    rgba(0, 0, 0, 0.15),
+                    rgba(0, 0, 0, 0.45)
+    ), url('/assets/quotes.jpg') no-repeat center center fixed;
     width: 100%;
-    height: 100%;
+    height: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
-
-}
-
-.slide h1, .slide h2 {
     color: #fff;
-    text-shadow: 2px 2px 1px #000;
-}
+    position: relative;
 
-.slide.active {
-    opacity: 1;
-}
+    &__slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transform: scale(0);
+        transition: .6s ease opacity, .6s ease transform;
+    }
 
-.image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+    h3,
+    h4 {
+        color: #fff;
+        text-shadow: 2px 2px 1px #000;
+        position: relative;
+        z-index: 1;
+    }
+
+    h3 {
+        padding: 0 20px;
+        max-width: 1024px;
+        width: 100%;
+        position: relative;
+    }
+
+    &__quote {
+        font-size: 21px;
+        position: relative;
+        left: -10px;
+        top: -15px;
+
+        &_right {
+            left: auto;
+            right: -10px;
+            top: -15px;
+        }
+    }
+
+    &__slide.active {
+        opacity: 1;
+        transform: scale(1);
+        transition-duration: .4s;
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }

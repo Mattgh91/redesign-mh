@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {ClientItem, QuoteContainer} from './Animations';
+import { ClientItem } from './Animations';
 import { PoseGroup } from 'react-pose';
 import '../styles/clients.scss';
 
@@ -49,7 +49,8 @@ class Clients extends Component {
         const { quoteVisible } = this.state;
         return (
             <section className="clients">
-                <h3>Clients</h3>
+                <h3>People I've worked with</h3>
+                <p>I've selected a few clients I've had the pleasure of working with</p>
                 <div className="clients__list" ref={this.clientListDiv}>
                     <PoseGroup>
                         {clientList.map(client => (

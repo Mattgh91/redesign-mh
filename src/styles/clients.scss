@@ -6,12 +6,11 @@
     box-shadow: rgba(0, 0, 0, 0.26) 0 2px 5px;
     position: relative;
 
-
     &__list {
         display: flex;
         justify-content: space-between;
         max-width: 768px;
-        margin: 0 auto;
+        margin: 30px auto 0;
         padding: 0 20px;
     }
 

@@ -2,7 +2,6 @@ import React from 'react';
 import Header from './components/Header.jsx';
 import Landing from './components/Landing.jsx';
 import AboutMe from './components/AboutMe.jsx';
-import Quotes from './components/Quotes.jsx';
 import Clients from './components/Clients.jsx';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
@@ -16,7 +15,6 @@ const App = () => (
         <main>
             <Landing />
             <AboutMe />
-            <Quotes />
             <Slider slides={defaultSlides} />
             <Clients />
             <Contact />

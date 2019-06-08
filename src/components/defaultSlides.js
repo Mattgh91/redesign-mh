@@ -1,17 +1,17 @@
 const defaultSlides = [
     {
-        title: 'First slide!',
-        subtitle: 'is it working?',
+        title: 'Make every detail perfect and limit the number of details to perfect.',
+        subtitle: 'Jack Dorsey, Twitter Co-founder',
         image: 'https://picsum.photos/300',
     },
     {
-        title: "Second Slide",
-        subtitle: "ohhh yeah",
+        title: "The problem with quotes on the Internet is that it is hard to verify their authenticity.",
+        subtitle: "Abraham Lincoln",
         image: "https://picsum.photos/400"
     },
     {
-        title: "Third Slide",
-        subtitle: "last one! ✨",
+        title: "The Web as I envisaged it, we have not seen it yet. The future is still so much bigger than the past.",
+        subtitle: "Tim Berners-Lee",
         image: "https://picsum.photos/350"
     },
 ];
