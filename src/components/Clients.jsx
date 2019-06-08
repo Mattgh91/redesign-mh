@@ -19,17 +19,23 @@ class Clients extends Component {
 
         this.state = {
             quoteVisible: false,
-            thePosition: 401,
             visibleSlide: 0,
         };
     }
 
     componentDidMount() {
         window.addEventListener('scroll', () => {
-            const { thePosition } = this.state;
+            const checkIfIsInView = () => {
+                const rect = this.clientListDiv.current.getBoundingClientRect();
+                return (
+                    rect.top >= 0
+                    && rect.left >= 0
+                    && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+                    && rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            };
             this.setState({
-                thePosition: this.clientListDiv.current.getBoundingClientRect().top,
-                quoteVisible: thePosition < 400,
+                quoteVisible: checkIfIsInView(),
             });
         }, {passive: true});
     }

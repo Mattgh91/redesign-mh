@@ -6,6 +6,8 @@ import Quotes from './components/Quotes.jsx';
 import Clients from './components/Clients.jsx';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
+import defaultSlides from './components/defaultSlides.js';
+import Slider from './components/Slider.jsx';
 import './App.scss';
 
 const App = () => (
@@ -15,6 +17,7 @@ const App = () => (
             <Landing />
             <AboutMe />
             <Quotes />
+            <Slider slides={defaultSlides} />
             <Clients />
             <Contact />
         </main>
