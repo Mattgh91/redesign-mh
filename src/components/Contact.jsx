@@ -10,7 +10,7 @@ const encode = (data) => {
 class Contact extends Component {
     constructor(props) {
         super(props);
-        this.state = { name: "", email: "", message: "" };
+        this.state = { name: "", email: "", subject: "", message: "" };
     }
 
     /* Here’s the juicy bit for posting the form submission */
@@ -30,7 +30,7 @@ class Contact extends Component {
     handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
     render() {
-        const { name, email, message } = this.state;
+        const { name, email, subject, message } = this.state;
         return (
             <section className="contact">
                 <h3>Get in touch</h3>
@@ -43,6 +43,11 @@ class Contact extends Component {
                     <p>
                         <label>
                             Your Email: <input type="email" name="email" value={email} onChange={this.handleChange} />
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            Subject: <input type="subject" name="subject" value={subject} onChange={this.handleChange} />
                         </label>
                     </p>
                     <p>
