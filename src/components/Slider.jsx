@@ -12,7 +12,7 @@ const Slider = ({ slides }) => {
     };
 
     React.useEffect(() => {
-        setTimeout(goToNext, 5000);
+        setTimeout(goToNext, 7500);
         return function() {
             clearTimeout(goToNext);
         }

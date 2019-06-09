@@ -82,11 +82,92 @@ const ClientItem = posed.img({
     props: { i: 0 },
 });
 
+const ContactInput = posed.input({
+    focusable: true,
+    init: {
+        // outlineWidth: '0px',
+        // outlineOffset: '0px',
+        boxShadow: '0px 0px 5px 0px rgba(8, 128, 165, 0)',
+    },
+    focus: {
+        // outlineWidth: '6px',
+        // outlineOffset: '3px',
+        // outlineColor: '#0980A5',
+        boxShadow: '0px 0px 5px 0px rgb(8, 128, 165)',
+    }
+});
+
+const ContactTextArea = posed.textarea({
+    focusable: true,
+    init: {
+        // outlineWidth: '0px',
+        // outlineOffset: '0px',
+        boxShadow: '0px 0px 5px 0px rgba(8, 128, 165, 0)',
+    },
+    focus: {
+        // outlineWidth: '6px',
+        // outlineOffset: '3px',
+        // outlineColor: '#0980A5',
+        boxShadow: '0px 0px 5px 0px rgb(8, 128, 165)',
+    }
+});
+
+const ContactButton = posed.button({
+    hoverable: true,
+    init: {
+        background: '#111432',
+        boxShadow: '0px 0px 0px rgba(0,0,0,0)'
+    },
+    hover: {
+        background: 'rgb(9, 128, 165)',
+        boxShadow: '0px 5px 10px rgba(0,0,0,0.2)'
+    }
+});
+
+const ContactFormContainer = posed.div({
+    notsubmitted: {
+        backgroundColor: 'rgba(0, 0, 0, 1)',
+        y: 0,
+        scale: 1,
+        opacity: 1,
+        applyAtStart: { display: 'block' },
+        transition: {
+            duration: 500,
+        },
+    },
+    submitted: {
+        backgroundColor: 'rgba(255, 255, 255, 1)',
+        y: 35,
+        scale: 0.65,
+        opacity: 0,
+        applyAtEnd: { display: 'none' },
+        transition: {
+            duration: 500,
+        },
+    },
+});
+
+const ContactFormSubmitComplete = posed.div({
+   notsubmitted: {
+       height: 0,
+       applyAtEnd: { display: 'none' },
+   },
+    submitted: {
+        height: 347,
+        applyAtStart: { display: 'flex' },
+    },
+});
+
 export {
     HeaderContainer,
     HeaderItem,
     Box,
     QuoteContainer,
     Quote,
-    ClientItem
+    ClientItem,
+    ContactInput,
+    ContactTextArea,
+    ContactButton,
+    ContactFormContainer,
+    ContactFormSubmitComplete,
 };

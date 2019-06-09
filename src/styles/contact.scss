@@ -1,4 +1,79 @@
+@import './variables';
+
 .contact {
-    height: 500px;
     background: #fff;
+    box-sizing: content-box;
+
+    a {
+        color: $dark-blue;
+    }
+
+    &__outer {
+        position: relative;
+        height: 347px;
+    }
+
+    &__submitted,
+    &__container {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    &__submitted {
+        background: rgb(17, 20, 50);
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+    }
+
+    &__form {
+        max-width: 768px;
+        margin: 25px auto 0;
+
+        label,
+        input,
+        textarea,
+        button {
+            width: 100%;
+        }
+
+        input,
+        textarea {
+            border: 1px solid $blue;
+            box-shadow: none;
+            padding: 10px 7.5px;
+            max-width: 100%;
+
+            &:focus {
+                outline-style: outset;
+            }
+        }
+
+        textarea {
+            height: 150px;
+            resize: none;
+        }
+
+        button {
+            padding: 10px 7.5px;
+            background: $dark-blue;
+            border: none;
+            color: #fff;
+        }
+
+        &-top {
+            display: flex;
+            justify-content: space-between;
+
+            label {
+                width: 49%;
+            }
+
+            input {
+                width: 100%;
+            }
+        }
+    }
 }

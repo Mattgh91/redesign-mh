@@ -54,15 +54,17 @@ class Clients extends Component {
                 <div className="clients__list" ref={this.clientListDiv}>
                     <PoseGroup>
                         {clientList.map(client => (
-                            <ClientItem
-                                i={client.id}
-                                src={client.src}
-                                alt={client.alt}
-                                key={client.id}
-                                pose={quoteVisible ? 'scrolledIntoView' : 'notInView'}
-                                initialPose="notInView"
-                                className="clients__client"
-                            />
+                            <div key={client.id} className="clients__container">
+                                <ClientItem
+                                    i={client.id}
+                                    src={client.src}
+                                    alt={client.alt}
+                                    pose={quoteVisible ? 'scrolledIntoView' : 'notInView'}
+                                    initialPose="notInView"
+                                    className="clients__client"
+                                />
+                                <div className="vh">{client.alt}></div>
+                            </div>
                         ))}
                     </PoseGroup>
                 </div>

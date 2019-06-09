@@ -7,7 +7,10 @@ import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 import defaultSlides from './components/defaultSlides.js';
 import Slider from './components/Slider.jsx';
+import EnableTabbing from './components/enableTabbing';
 import './App.scss';
+
+EnableTabbing();
 
 const App = () => (
     <div className="App">
