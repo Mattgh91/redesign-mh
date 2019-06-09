@@ -61,7 +61,7 @@ class Contact extends Component {
                         <form onSubmit={this.handleSubmit} className="contact__form">
                             <p className="contact__form-top">
                                 <label htmlFor="name">
-                                    <span className="vh">Your Name:</span>
+                                    <span className="vh">Your Name</span>
                                     <ContactInput
                                         type="text"
                                         name="name"
@@ -72,7 +72,7 @@ class Contact extends Component {
                                     />
                                 </label>
                                 <label htmlFor="email">
-                                    <span className="vh">Your Email:</span>
+                                    <span className="vh">Your Email</span>
                                     <ContactInput
                                         type="email"
                                         name="email"
@@ -85,7 +85,7 @@ class Contact extends Component {
                             </p>
                             <p>
                                 <label htmlFor="subject">
-                                    <span className="vh">Subject:</span>
+                                    <span className="vh">Subject</span>
                                     <ContactInput
                                         type="subject"
                                         name="subject"
@@ -97,7 +97,7 @@ class Contact extends Component {
                             </p>
                             <p>
                                 <label htmlFor="message">
-                                    <span className="vh">Message:</span>
+                                    <span className="vh">Message</span>
                                     <ContactTextArea
                                         name="message"
                                         placeholder="Message"

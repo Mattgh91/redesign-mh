@@ -8,6 +8,7 @@
 
     &__list {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         max-width: 768px;
         margin: 30px auto 0;
@@ -16,6 +17,8 @@
 
     &__container {
         display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     &__client {
