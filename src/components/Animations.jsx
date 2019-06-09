@@ -149,10 +149,16 @@ const ContactFormSubmitComplete = posed.div({
    notsubmitted: {
        height: 0,
        applyAtEnd: { display: 'none' },
+       transition: {
+            duration: 500,
+        },
    },
     submitted: {
         height: 347,
         applyAtStart: { display: 'flex' },
+        transition: {
+            duration: 500,
+        },
     },
 });
 
