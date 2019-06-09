@@ -154,7 +154,7 @@ const ContactFormSubmitComplete = posed.div({
         },
    },
     submitted: {
-        height: 317,
+        height: 352,
         applyAtStart: { display: 'flex' },
         transition: {
             duration: 500,
