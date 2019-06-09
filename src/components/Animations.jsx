@@ -126,7 +126,6 @@ const ContactButton = posed.button({
 
 const ContactFormContainer = posed.div({
     notsubmitted: {
-        backgroundColor: 'rgba(0, 0, 0, 1)',
         y: 0,
         scale: 1,
         opacity: 1,
@@ -136,7 +135,6 @@ const ContactFormContainer = posed.div({
         },
     },
     submitted: {
-        backgroundColor: 'rgba(255, 255, 255, 1)',
         y: 35,
         scale: 0.65,
         opacity: 0,
