@@ -3,14 +3,6 @@ import { PoseGroup } from 'react-pose';
 import { HeaderContainer, HeaderItem, HeaderUl, HeaderLi } from './Animations';
 import '../styles/header.scss';
 
-const scrollFunc = param => {
-    const scrollToThis = document.querySelector(`.${param}`);
-    scrollToThis.scrollIntoView({
-        behavior: 'smooth',
-        block: 'center',
-    });
-};
-
 class Header extends Component {
     constructor(props){
         super(props);
@@ -18,11 +10,11 @@ class Header extends Component {
         this.menu = React.createRef();
         this.mobileButton = React.createRef();
         this.toggleMenu = this.toggleMenu.bind(this);
+        this.scrollFunc = this.scrollFunc.bind(this);
 
         this.state = {
             isScrolled: false,
             showNav: false,
-            isMobile: this.menu.current ? window.getComputedStyle(this.menu.current).display === 'flex' : false,
         }
     }
 
@@ -34,7 +26,6 @@ class Header extends Component {
         });
 
         window.addEventListener('scroll', () => {
-            console.log('HELLO: ', window.getComputedStyle(this.menu.current).display);
             if (window.pageYOffset > 0) {
                 this.setState({
                     isScrolled: true,
@@ -54,6 +45,15 @@ class Header extends Component {
         });
     }
 
+    scrollFunc(param) {
+        const scrollToThis = document.querySelector(`.${param}`);
+        scrollToThis.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center',
+        });
+        this.toggleMenu();
+    };
+
     componentWillUnmount() {
         window.removeEventListener('scroll', () => {});
     }
@@ -67,7 +67,7 @@ class Header extends Component {
             >
                 <HeaderItem
                     href="#/"
-                    onClick={() => scrollFunc('landing')}
+                    onClick={() => this.scrollFunc('landing')}
                     className="logo"
                 >
                     Matt Haynes
@@ -81,7 +81,7 @@ class Header extends Component {
                             <HeaderLi key={0}>
                                 <HeaderItem
                                     href="#quotes"
-                                    onClick={() => scrollFunc('about-me')}
+                                    onClick={() => this.scrollFunc('about-me')}
                                 >
                                     About Me
                                 </HeaderItem>
@@ -89,7 +89,7 @@ class Header extends Component {
                             <HeaderLi key={1}>
                                 <HeaderItem
                                     href="#my-projects"
-                                    onClick={() => scrollFunc('clients')}
+                                    onClick={() => this.scrollFunc('clients')}
                                 >
                                     My Work
                                 </HeaderItem>
@@ -97,7 +97,7 @@ class Header extends Component {
                             <HeaderLi key={2}>
                                 <HeaderItem
                                     href="#contact"
-                                    onClick={() => scrollFunc('contact')}
+                                    onClick={() => this.scrollFunc('contact')}
                                 >
                                     Contact
                                 </HeaderItem>
