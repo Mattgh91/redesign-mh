@@ -23,11 +23,11 @@ const HeaderItem = posed.a({
 const HeaderUl = posed.ul({
     show: {
         backgroundColor: '#111432',
-        delayChildren: 200,
         staggerChildren: 50,
         applyAtStart: { display: 'flex' },
+        beforeChildren: true,
         transition: {
-            duration: 750,
+            duration: 350,
         },
     },
     hide: {
@@ -35,8 +35,9 @@ const HeaderUl = posed.ul({
         staggerChildren: 50,
         staggerDirection: -1,
         applyAtEnd: { display: 'none' },
+        afterChildren: true,
         transition: {
-            duration: 750,
+            duration: 350,
         },
     },
 });
