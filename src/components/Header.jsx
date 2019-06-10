@@ -33,6 +33,10 @@ class Header extends Component {
         });
     }
 
+    componentWillUnmount() {
+        window.removeEventListener('scroll', () => {});
+    }
+
     render() {
         const { isScrolled } = this.state;
         return (
