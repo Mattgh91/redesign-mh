@@ -20,6 +20,44 @@ const HeaderItem = posed.a({
     },
 });
 
+const HeaderUl = posed.ul({
+    show: {
+        backgroundColor: '#111432',
+        delayChildren: 200,
+        staggerChildren: 50,
+        applyAtStart: { display: 'flex' },
+        transition: {
+            duration: 750,
+        },
+    },
+    hide: {
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        staggerChildren: 50,
+        staggerDirection: -1,
+        applyAtEnd: { display: 'none' },
+        transition: {
+            duration: 750,
+        },
+    },
+});
+
+const HeaderLi = posed.li({
+    show: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 250,
+        }
+    },
+    hide: {
+        y: 35,
+        opacity: 0,
+        transition: {
+            duration: 250,
+        }
+    },
+});
+
 const Box = posed.div({
     hidden: {
         opacity: 0,
@@ -165,6 +203,8 @@ const ContactFormSubmitComplete = posed.div({
 export {
     HeaderContainer,
     HeaderItem,
+    HeaderUl,
+    HeaderLi,
     Box,
     QuoteContainer,
     Quote,
