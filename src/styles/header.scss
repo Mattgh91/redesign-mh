@@ -80,8 +80,24 @@ header {
         .mobile {
             position: fixed;
             right: 20px;
-            padding: 20px;
+            padding: 20px 10px;
             z-index: 10;
+
+            &__line {
+                width: 30px;
+                height: 3px;
+                background: $dark-blue;
+                position: relative;
+                display: block;
+
+                &.top {
+                    top: -6px;
+                }
+
+                &.bot {
+                    top: 6px;
+                }
+            }
         }
         nav {
             ul {

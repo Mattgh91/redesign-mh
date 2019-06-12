@@ -80,7 +80,10 @@ class Header extends PureComponent {
                 >
                     Matt Haynes
                 </HeaderItem>
-                <button className="mobile" onClick={this.toggleMenu}>
+                <button className={`mobile ${showNav ? 'open' : 'closed'}`} onClick={this.toggleMenu}>
+                    <span className="mobile__line top" > </span>
+                    <span className="mobile__line mid" > </span>
+                    <span className="mobile__line bot" > </span>
                     <span className="vh">Toggle Menu</span>
                 </button>
                 <nav>
