@@ -34,7 +34,7 @@ class Landing extends Component {
     render() {
         const { isVisible, videoPlaying } = this.state;
         return (
-            <section className="landing">
+            <section className="landing" id="landing">
                 <video
                     ref={this.video}
                     src="/assets/abstract.mp4"

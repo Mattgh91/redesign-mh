@@ -83,12 +83,12 @@ $LatoLight: Lato-Light, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
 "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
 sans-serif;
 
-h2, h3, h4, h5, h6, p {
+h2, h3, h4, h5, h6, p, input, textarea, body {
     margin-top: 0;
     font-family: $LatoLight;
 }
 
-a {
+a, button {
     font-family: $LatoRegular;
 }
 

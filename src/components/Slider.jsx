@@ -23,7 +23,7 @@ const Slider = ({ slides }) => {
     }
 
     return (
-        <section className="slider">
+        <section className="slider" id="slider">
             {slides.map((s, i) => (
                 <div
                     className={i === curr ? "slider__slide active" : "slider__slide"}

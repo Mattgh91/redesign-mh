@@ -47,7 +47,7 @@ class Clients extends Component {
     render() {
         const { quoteVisible } = this.state;
         return (
-            <section className="clients">
+            <section className="clients" id="clients">
                 <h3>People I've worked with</h3>
                 <p>I've selected a few clients I've had the pleasure of working with</p>
                 <div className="clients__list" ref={this.clientListDiv}>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { PoseGroup } from 'react-pose';
 import { HeaderContainer, HeaderItem, HeaderUl, HeaderLi } from './Animations';
 import '../styles/header.scss';
+// import zenscroll from 'zenscroll'
 
 class Header extends Component {
     constructor(props){
@@ -9,7 +10,6 @@ class Header extends Component {
 
         this.menu = React.createRef();
         this.mobileButton = React.createRef();
-        this.toggleMenu = this.toggleMenu.bind(this);
         this.scrollFunc = this.scrollFunc.bind(this);
 
         this.state = {
@@ -38,20 +38,21 @@ class Header extends Component {
         });
     }
 
-    toggleMenu() {
+    toggleMenu = () => {
         const { showNav } = this.state;
+        console.log('toggle');
         this.setState({
            showNav: !showNav,
-        });
-    }
+        }, () =>
+        console.log(this.state.showNav));
+    };
 
     scrollFunc(param) {
-        const scrollToThis = document.querySelector(`.${param}`);
-        scrollToThis.scrollIntoView({
-            behavior: 'smooth',
-            block: 'center',
-        });
         this.toggleMenu();
+        // Need a new scroll function this one is buggy AF
+        // const scrollHere = document.getElementById(param);
+        // console.log(scrollHere);
+        // zenscroll.center(scrollHere, 350, 0);
     };
 
     componentWillUnmount() {
@@ -80,8 +81,8 @@ class Header extends Component {
                         <PoseGroup>
                             <HeaderLi key={0}>
                                 <HeaderItem
-                                    href="#quotes"
-                                    onClick={() => this.scrollFunc('about-me')}
+                                    href="#aboutMe"
+                                    onClick={() => this.scrollFunc('aboutMe')}
                                 >
                                     About Me
                                 </HeaderItem>

@@ -49,7 +49,7 @@ class Contact extends Component {
             submitted
         } = this.state;
         return (
-            <section className="contact">
+            <section className="contact" id="contact">
                 <h3>Get in touch</h3>
                 <p>Feel free to get in touch any time! I'd love to hear from you.</p>
                 <p>You can use the contact form below, or email me at <a href="mailto:mattgh9152@gmail.com">mattgh9152@gmail.com</a></p>
