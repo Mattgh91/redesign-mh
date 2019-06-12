@@ -17,6 +17,8 @@ const encode = (data) => {
 class Contact extends Component {
     constructor(props) {
         super(props);
+
+        this.contactSection = React.createRef();
         this.state = {
             name: "",
             email: "",
@@ -24,6 +26,11 @@ class Contact extends Component {
             message: "",
             submitted: false,
         };
+    }
+
+    componentDidMount() {
+        const { passRefUpward } = this.props;
+        passRefUpward('contact', this.contactSection);
     }
 
     handleSubmit = e => {
@@ -49,7 +56,7 @@ class Contact extends Component {
             submitted
         } = this.state;
         return (
-            <section className="contact" id="contact">
+            <section className="contact" id="contact" ref={this.contactSection}>
                 <h3>Get in touch</h3>
                 <p>Feel free to get in touch any time! I'd love to hear from you.</p>
                 <p>You can use the contact form below, or email me at <a href="mailto:mattgh9152@gmail.com">mattgh9152@gmail.com</a></p>

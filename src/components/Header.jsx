@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import scrollToComponent from 'react-scroll-to-component';
 import { PoseGroup } from 'react-pose';
 import { HeaderContainer, HeaderItem, HeaderUl, HeaderLi } from './Animations';
 import '../styles/header.scss';
-// import zenscroll from 'zenscroll'
 
 class Header extends Component {
     constructor(props){
@@ -19,11 +19,10 @@ class Header extends Component {
     }
 
     componentDidMount() {
-        window.addEventListener('resize', () => {
-            // this.setState({
-            //     showNav: false,
-            // }); .
-        });
+        const { childRefs } = this.props;
+        console.log('HEADER childRefs: ', childRefs);
+
+        // Implement scrollToComponent using these childRefs...
 
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 0) {
@@ -49,10 +48,6 @@ class Header extends Component {
 
     scrollFunc(param) {
         this.toggleMenu();
-        // Need a new scroll function this one is buggy AF
-        // const scrollHere = document.getElementById(param);
-        // console.log(scrollHere);
-        // zenscroll.center(scrollHere, 350, 0);
     };
 
     componentWillUnmount() {
@@ -67,7 +62,7 @@ class Header extends Component {
                 className={isScrolled ? 'scrolled' : 'notScrolled'}
             >
                 <HeaderItem
-                    href="#/"
+                    href="#"
                     onClick={() => this.scrollFunc('landing')}
                     className="logo"
                 >
@@ -89,7 +84,7 @@ class Header extends Component {
                             </HeaderLi>
                             <HeaderLi key={1}>
                                 <HeaderItem
-                                    href="#my-projects"
+                                    href="#clients"
                                     onClick={() => this.scrollFunc('clients')}
                                 >
                                     My Work

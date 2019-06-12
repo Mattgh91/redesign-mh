@@ -9,6 +9,7 @@ class Landing extends Component {
         super(props);
 
         this.video = React.createRef();
+        this.landingSection = React.createRef();
         this.pauseToggle = this.pauseToggle.bind(this);
 
         this.state = {
@@ -18,6 +19,9 @@ class Landing extends Component {
     }
 
     componentDidMount() {
+        const { passRefUpward } = this.props;
+        passRefUpward('landing', this.landingSection);
+
         this.setState({
             isVisible: true,
         });
@@ -34,7 +38,7 @@ class Landing extends Component {
     render() {
         const { isVisible, videoPlaying } = this.state;
         return (
-            <section className="landing" id="landing">
+            <section className="landing" id="landing" ref={this.landingSection}>
                 <video
                     ref={this.video}
                     src="/assets/abstract.mp4"
