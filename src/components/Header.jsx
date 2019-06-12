@@ -8,10 +8,6 @@ class Header extends PureComponent {
     constructor(props){
         super(props);
 
-        this.menu = React.createRef();
-        this.mobileButton = React.createRef();
-        this.scrollFunc = this.scrollFunc.bind(this);
-
         this.state = {
             isScrolled: false,
             showNav: false,
@@ -19,16 +15,6 @@ class Header extends PureComponent {
     }
 
     componentDidMount() {
-        const { childRefs } = this.props;
-        console.log('componentDidMount: ', childRefs);
-
-        // childRefs.forEach(child => {
-        //     console.log('CHILD ---- ', child);
-        // });
-
-
-        // Implement scrollToComponent using these childRefs...
-
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 0) {
                 this.setState({
@@ -44,15 +30,9 @@ class Header extends PureComponent {
 
     toggleMenu = () => {
         const { showNav } = this.state;
-        console.log('toggle');
         this.setState({
            showNav: !showNav,
-        }, () =>
-        console.log(this.state.showNav));
-    };
-
-    scrollFunc(param) {
-        // this.toggleMenu();
+        });
     };
 
     componentWillUnmount() {
@@ -92,18 +72,18 @@ class Header extends PureComponent {
                     onClick={
                         () => scrollToComponent(
                             landing,
-                            { offset: -100, align: 'top', duration: 1500}
+                            { offset: 0, align: 'top', duration: 1500}
                         )
                     }
                     className="logo"
                 >
                     Matt Haynes
                 </HeaderItem>
-                <button className="mobile" onClick={this.toggleMenu} ref={this.mobileButton}>
+                <button className="mobile" onClick={this.toggleMenu}>
                     <span className="vh">Toggle Menu</span>
                 </button>
                 <nav>
-                    <HeaderUl pose={showNav ? 'show' : 'hide'} ref={this.menu}>
+                    <HeaderUl pose={showNav ? 'show' : 'hide'}>
                         <PoseGroup>
                             <HeaderLi key={0}>
                                 <HeaderItem
