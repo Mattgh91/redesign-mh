@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import scrollToComponent from 'react-scroll-to-component';
 import { PoseGroup } from 'react-pose';
 import { HeaderContainer, HeaderItem, HeaderUl, HeaderLi } from './Animations';
 import '../styles/header.scss';
 
-class Header extends Component {
+class Header extends PureComponent {
     constructor(props){
         super(props);
 
@@ -20,7 +20,12 @@ class Header extends Component {
 
     componentDidMount() {
         const { childRefs } = this.props;
-        console.log('HEADER childRefs: ', childRefs);
+        console.log('componentDidMount: ', childRefs);
+
+        // childRefs.forEach(child => {
+        //     console.log('CHILD ---- ', child);
+        // });
+
 
         // Implement scrollToComponent using these childRefs...
 
@@ -47,7 +52,7 @@ class Header extends Component {
     };
 
     scrollFunc(param) {
-        this.toggleMenu();
+        // this.toggleMenu();
     };
 
     componentWillUnmount() {
@@ -56,6 +61,27 @@ class Header extends Component {
 
     render() {
         const { isScrolled, showNav } = this.state;
+        const { childRefs } = this.props;
+        let landing;
+        let clients;
+        let contact;
+        let aboutMe;
+
+        for (let i = 0; i < childRefs.length; i +=1) {
+            if (childRefs[i].refIndex === 'landing') {
+                landing = childRefs[i].childRefs.current;
+            }
+            if (childRefs[i].refIndex === 'clients') {
+                clients = childRefs[i].childRefs.current;
+            }
+            if (childRefs[i].refIndex === 'contact') {
+                contact = childRefs[i].childRefs.current;
+            }
+            if (childRefs[i].refIndex === 'aboutMe') {
+                aboutMe = childRefs[i].childRefs.current;
+            }
+        }
+
         return (
             <HeaderContainer
                 pose={isScrolled ? 'scrolled' : 'notScrolled'}
@@ -63,7 +89,12 @@ class Header extends Component {
             >
                 <HeaderItem
                     href="#"
-                    onClick={() => this.scrollFunc('landing')}
+                    onClick={
+                        () => scrollToComponent(
+                            landing,
+                            { offset: -100, align: 'top', duration: 1500}
+                        )
+                    }
                     className="logo"
                 >
                     Matt Haynes
@@ -77,7 +108,14 @@ class Header extends Component {
                             <HeaderLi key={0}>
                                 <HeaderItem
                                     href="#aboutMe"
-                                    onClick={() => this.scrollFunc('aboutMe')}
+                                    onClick={
+                                        () => {scrollToComponent(
+                                            aboutMe,
+                                            { offset: -100, align: 'top', duration: 1500}
+                                        );
+                                            this.toggleMenu();
+                                        }
+                                    }
                                 >
                                     About Me
                                 </HeaderItem>
@@ -85,7 +123,15 @@ class Header extends Component {
                             <HeaderLi key={1}>
                                 <HeaderItem
                                     href="#clients"
-                                    onClick={() => this.scrollFunc('clients')}
+                                    onClick={
+                                        () => {scrollToComponent(
+                                            clients,
+                                            { offset: -100, align: 'top', duration: 1500}
+                                        );
+                                        this.toggleMenu();
+                                        }
+                                    }
+
                                 >
                                     My Work
                                 </HeaderItem>
@@ -93,7 +139,14 @@ class Header extends Component {
                             <HeaderLi key={2}>
                                 <HeaderItem
                                     href="#contact"
-                                    onClick={() => this.scrollFunc('contact')}
+                                    onClick={
+                                        () => {scrollToComponent(
+                                            contact,
+                                            { offset: -100, align: 'top', duration: 1500}
+                                        );
+                                            this.toggleMenu();
+                                        }
+                                    }
                                 >
                                     Contact
                                 </HeaderItem>

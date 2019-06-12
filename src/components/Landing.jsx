@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPause, faPlay } from '@fortawesome/free-solid-svg-icons';
 import { Box } from './Animations.jsx';
 import '../styles/landing.scss';
 
-class Landing extends Component {
+class Landing extends PureComponent {
     constructor(props) {
         super(props);
 

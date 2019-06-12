@@ -25,9 +25,14 @@ class App extends Component {
         const { myRequestedRefs } = this.state;
         this.setState({
             myRequestedRefs: myRequestedRefs.push({refIndex, childRefs}),
-        }, () =>
-            console.log(myRequestedRefs)
-        );
+        });
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return (
+            this.state.myRequestedRefs !== nextState.myRequestedRefs
+            && typeof nextState.myRequestedRefs !== "number"
+        )
     }
 
     render() {
