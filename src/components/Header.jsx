@@ -22,7 +22,7 @@ class Header extends Component {
         window.addEventListener('resize', () => {
             // this.setState({
             //     showNav: false,
-            // });
+            // }); .
         });
 
         window.addEventListener('scroll', () => {
