@@ -52,14 +52,14 @@ class Header extends PureComponent {
             if (childRefs[i].refIndex === 'landing') {
                 landing = childRefs[i].childRefs.current;
             }
+            if (childRefs[i].refIndex === 'aboutMe') {
+                aboutMe = childRefs[i].childRefs.current;
+            }
             if (childRefs[i].refIndex === 'clients') {
                 clients = childRefs[i].childRefs.current;
             }
             if (childRefs[i].refIndex === 'contact') {
                 contact = childRefs[i].childRefs.current;
-            }
-            if (childRefs[i].refIndex === 'aboutMe') {
-                aboutMe = childRefs[i].childRefs.current;
             }
         }
 
@@ -82,7 +82,10 @@ class Header extends PureComponent {
                     Matt Haynes
                 </HeaderItem>
 
-                <button className={`mobile ${showNav ? 'open' : 'closed'}`} onClick={this.toggleMenu}>
+                <button
+                    className={`mobile ${showNav ? 'open' : 'closed'}`}
+                    onClick={this.toggleMenu}
+                >
                     <div className="hamburger">
                         <span> </span>
                         <span> </span>
@@ -123,7 +126,7 @@ class Header extends PureComponent {
                                             { offset: -100, align: 'top', duration: 1500},
                                             e.preventDefault(),
                                         );
-                                        this.toggleMenu();
+                                            this.toggleMenu();
                                         }
                                     }
 
