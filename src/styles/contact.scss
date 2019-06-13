@@ -77,8 +77,20 @@
             display: flex;
             justify-content: space-between;
 
+            @media (max-width: 600px) {
+                flex-direction: column;
+            }
+
             label {
                 width: calc(50% - 5px);
+
+                @media (max-width: 600px) {
+                    width: 100%;
+
+                    &[for=name] {
+                        margin-bottom: 10px;
+                    }
+                }
             }
 
             input {

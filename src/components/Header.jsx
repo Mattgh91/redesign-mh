@@ -3,6 +3,7 @@ import scrollToComponent from 'react-scroll-to-component';
 import { PoseGroup } from 'react-pose';
 import { HeaderContainer, HeaderItem, HeaderUl, HeaderLi } from './Animations';
 import '../styles/header.scss';
+import '../styles/_BurgerMenu.scss';
 
 class Header extends PureComponent {
     constructor(props){
@@ -80,12 +81,20 @@ class Header extends PureComponent {
                 >
                     Matt Haynes
                 </HeaderItem>
+
                 <button className={`mobile ${showNav ? 'open' : 'closed'}`} onClick={this.toggleMenu}>
-                    <span className="mobile__line top" > </span>
-                    <span className="mobile__line mid" > </span>
-                    <span className="mobile__line bot" > </span>
+                    <div className="hamburger">
+                        <span> </span>
+                        <span> </span>
+                        <span> </span>
+                    </div>
+                    <div className="cross">
+                        <span> </span>
+                        <span> </span>
+                    </div>
                     <span className="vh">Toggle Menu</span>
                 </button>
+
                 <nav>
                     <HeaderUl pose={showNav ? 'show' : 'hide'}>
                         <PoseGroup>

@@ -1,0 +1,113 @@
+@import './_variables.scss';
+
+button {
+    &.mobile {
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        background: transparent;
+        border-radius: 5px;
+        border: none;
+        &:hover {
+            //background: $blue;
+        }
+        .hamburger {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            span {
+                width: 40px;
+                height: 4px;
+                position: relative;
+                top: 0;
+                left: 10px;
+                margin: 8px 0;
+                &:nth-child(1){
+                    transition-delay: .5s;
+                }
+                &:nth-child(2){
+                    transition-delay: .625s;
+                }
+                &:nth-child(3){
+                    transition-delay: .75s;
+                }
+            }
+        }
+
+        .cross {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            transform: rotate(45deg);
+            top: -5px;
+            left: 0;
+            span {
+                &:nth-child(1){
+                    height: 0;
+                    width: 4px;
+                    position: absolute;
+                    top: 10%;
+                    left: 25px;
+                    transition-delay: 0s;
+                }
+                &:nth-child(2) {
+                    width: 0;
+                    height: 4px;
+                    position: absolute;
+                    left: 10%;
+                    top: 25px;
+                    transition-delay: .25s;
+                }
+            }
+        }
+        * {
+            transition: .25s ease-in-out;
+            box-sizing: border-box;
+        }
+
+        span {
+            display: block;
+            background: #fff;
+            border-radius: 2px;
+
+            .scrolled & {
+                background: $dark-blue;
+            }
+        }
+    }
+}
+
+button.mobile.open {
+    .hamburger {
+        span {
+            width: 0;
+            &:nth-child(1){
+                transition-delay: 0s;
+            }
+            &:nth-child(2){
+                transition-delay: .125s;
+            }
+            &:nth-child(3){
+                transition-delay: .25s;
+            }
+        }
+    }
+
+    .cross {
+        span {
+            background: #fff;
+            &:nth-child(1){
+                height: 75%;
+                transition-delay: .625s;
+            }
+        }
+        span {
+            &:nth-child(2){
+                width: 75%;
+                transition-delay: .375s;
+            }
+        }
+    }
+}
