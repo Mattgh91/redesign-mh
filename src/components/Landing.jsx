@@ -48,7 +48,7 @@ class Landing extends PureComponent {
                     loop
                     poster="/assets/cloth-bg.jpg"
                 />
-                <Box pose={isVisible ? 'visible' : 'hidden'}>
+                <Box pose={isVisible ? 'visible' : 'hidden'} className="landing__text">
                     <h1>Matt Haynes</h1>
                     <h2>A passionate front end web developer and designer; helping fill the internet with beautiful websites one page at a time</h2>
                 </Box>
