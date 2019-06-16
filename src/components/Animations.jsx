@@ -11,15 +11,6 @@ const HeaderContainer = posed.header({
     },
 });
 
-const HeaderItem = posed.a({
-    notScrolled: {
-        color: '#fff',
-    },
-    scrolled: {
-        color: '#0980A5',
-    },
-});
-
 const HeaderUl = posed.ul({
     show: {
         backgroundColor: '#111432',
@@ -35,7 +26,7 @@ const HeaderUl = posed.ul({
         staggerChildren: 50,
         staggerDirection: -1,
         applyAtEnd: { display: 'none' },
-        afterChildren: true,
+        // afterChildren: true, comment out for now; causing bug when scrolled to top
         transition: {
             duration: 350,
         },
@@ -56,6 +47,15 @@ const HeaderLi = posed.li({
         transition: {
             duration: 250,
         }
+    },
+});
+
+const HeaderItem = posed.a({
+    notScrolled: {
+        color: '#fff',
+    },
+    scrolled: {
+        color: '#0980A5',
     },
 });
 

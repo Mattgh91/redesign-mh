@@ -9,6 +9,7 @@ const clientList = [
     { src: '/assets/Film4.svg', alt: 'Film4', id: 3 },
     { src: '/assets/StudioLambert.svg', alt: 'Studio Lambert', id: 4 },
     { src: '/assets/ScienceMuseum.svg', alt: 'Science Museum', id: 5 },
+    { src: '/assets/MuseumsSheffield.svg', alt: 'Museums Sheffield', id: 6 },
 ];
 
 class Clients extends Component {
@@ -57,7 +58,7 @@ class Clients extends Component {
                 <div className="clients__list" ref={this.clientListDiv}>
                     <PoseGroup>
                         {clientList.map(client => (
-                            <div key={client.id} className="clients__container">
+                            <div key={client.id} className={`clients__container  clients__container_${client.id}`}>
                                 <ClientItem
                                     i={client.id}
                                     src={client.src}

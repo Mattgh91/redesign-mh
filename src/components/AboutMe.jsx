@@ -15,8 +15,14 @@ const AboutMe = ({ passRefUpward }) => {
             <h3>A little something about me</h3>
             <p>
                 I'm Matt. I'm an extremely passionate, and enthusiastic, self taught front end developer,
-                and server administrator, from Sheffield. I'm currently working on becoming an expert in
-                HTML, CSS, Javascript, React, while also, gradually, delving deeper into the back end.
+                designer, and server administrator, from Sheffield. I'm currently working
+                at <a href="https://joipolloi.com" target="_blank" rel="noopener noreferrer">Joi Polloi</a> creating
+                compelling digital experiences, engaging platforms and innovative products within
+                the television, media and cultural industries.
+            </p>
+            <p>
+                My current aims involve perfecting my front end work in HTML, CSS, Javascript, React, and a11y - while also,
+                gradually, delving deeper into the back end.
                 I like to think I have an eye for design but development is my primary passion.
                 I love a good joke, a bad pun, & a good strong Yorkshire brew...
                 or a pint, if the occasion calls!

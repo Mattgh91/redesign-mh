@@ -1,3 +1,5 @@
+@import './_variables.scss';
+
 .about-me {
     background-color: #fff;
 
@@ -6,5 +8,9 @@
         width: 100%;
         margin: 0 auto 25px;
         padding: 0 20px;
+    }
+
+    a {
+        color: $dark-blue;
     }
 }

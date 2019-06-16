@@ -33,7 +33,10 @@ class Header extends PureComponent {
         const { showNav } = this.state;
         this.setState({
            showNav: !showNav,
+        }, () => {
+            console.log('showNav: ', showNav);
         });
+        console.log('TOGGLE MENU', showNav);
     };
 
     componentWillUnmount() {
@@ -105,12 +108,13 @@ class Header extends PureComponent {
                                 <HeaderItem
                                     href="#aboutMe"
                                     onClick={
-                                        (e) => {scrollToComponent(
-                                            aboutMe,
-                                            { offset: -100, align: 'top', duration: 1500},
-                                            e.preventDefault()
-                                        );
+                                        (e) => {
                                             this.toggleMenu();
+                                            scrollToComponent(
+                                                aboutMe,
+                                                { offset: -100, align: 'top', duration: 1500},
+                                                e.preventDefault()
+                                            );
                                         }
                                     }
                                 >
@@ -121,12 +125,13 @@ class Header extends PureComponent {
                                 <HeaderItem
                                     href="#clients"
                                     onClick={
-                                        (e) => {scrollToComponent(
-                                            clients,
-                                            { offset: -100, align: 'top', duration: 1500},
-                                            e.preventDefault(),
-                                        );
+                                        (e) => {
                                             this.toggleMenu();
+                                            scrollToComponent(
+                                                clients,
+                                                { offset: -100, align: 'top', duration: 1500},
+                                                e.preventDefault(),
+                                            );
                                         }
                                     }
 
@@ -138,12 +143,13 @@ class Header extends PureComponent {
                                 <HeaderItem
                                     href="#contact"
                                     onClick={
-                                        (e) => {scrollToComponent(
-                                            contact,
-                                            { offset: -100, align: 'top', duration: 1500},
-                                            e.preventDefault(),
-                                        );
+                                        (e) => {
                                             this.toggleMenu();
+                                            scrollToComponent(
+                                                contact,
+                                                { offset: -100, align: 'top', duration: 1500},
+                                                e.preventDefault(),
+                                            );
                                         }
                                     }
                                 >

@@ -19,10 +19,22 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media (max-width: 650px) {
+            width: 33%;
+            margin-bottom: 25px;
+
+            &_4,
+            &_5,
+            &_6 {
+                margin-bottom: 0;
+            }
+        }
     }
 
     &__client {
         display: inline-block;
+        max-width: 90%;
     }
 
     p {
