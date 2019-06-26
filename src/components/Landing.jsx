@@ -50,7 +50,7 @@ class Landing extends PureComponent {
                 />
                 <Box pose={isVisible ? 'visible' : 'hidden'} className="landing__text">
                     <h1>Matt Haynes</h1>
-                    <h2>A passionate front end web developer and designer; helping fill the internet with beautiful websites one page at a time</h2>
+                    <h2>A passionate front end developer; helping fill the internet - or anywhere else! - with beautiful websites one page at a time</h2>
                 </Box>
                 <button onClick={this.pauseToggle}>
                     <FontAwesomeIcon icon={videoPlaying ? faPause : faPlay} />
