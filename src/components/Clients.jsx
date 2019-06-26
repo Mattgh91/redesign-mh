@@ -67,7 +67,7 @@ class Clients extends Component {
                                     initialPose="notInView"
                                     className="clients__client"
                                 />
-                                <div className="vh">{client.alt}></div>
+                                <div className="vh">{client.alt}</div>
                             </div>
                         ))}
                     </PoseGroup>
