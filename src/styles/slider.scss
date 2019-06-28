@@ -13,6 +13,10 @@
     position: relative;
     padding: 80px 0 60px;
 
+    @media screen and (max-width: 1024px) {
+        background-attachment: scroll;
+    }
+
     &__slide {
         position: absolute;
         top: 0;
