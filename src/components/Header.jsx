@@ -33,10 +33,7 @@ class Header extends PureComponent {
         const { showNav } = this.state;
         this.setState({
            showNav: !showNav,
-        }, () => {
-            console.log('showNav: ', showNav);
         });
-        console.log('TOGGLE MENU', showNav);
     };
 
     componentWillUnmount() {
