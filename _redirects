@@ -1,0 +1,8 @@
+# *** Warning! Your custom domain is not using HTTPS yet ***
+# These rules will change if you change your site’s custom domains or HTTPS settings
+
+# Redirect domain aliases to primary domain
+https://matthaynes.uk/* https://matthaynes.uk/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://nostalgic-ptolemy-b0ac4e.netlify.com/* https://matthaynes.uk/:splat 301!
