@@ -12,9 +12,9 @@ const HeaderContainer = posed.header({
 });
 
 const HeaderLogoG = posed.g({
-    notScrolled: { fill: 'rgba(255, 255, 255, 1)', },
+    notScrolled: { fill: '#ffffff', },
     scrolled: {
-        fill: 'rgba(0, 0, 0, 1)',
+        fill: '#111432',
         transition: {
             duration: 1000,
             delay: 1250,
