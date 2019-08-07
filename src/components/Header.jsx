@@ -6,7 +6,6 @@ import {
     HeaderItem,
     HeaderUl,
     HeaderLi,
-    HeaderLogo,
     HeaderLogoG,
 } from './Animations';
 import '../styles/header.scss';
