@@ -1,7 +1,14 @@
 import React, { PureComponent } from 'react';
 import scrollToComponent from 'react-scroll-to-component';
 import { PoseGroup } from 'react-pose';
-import { HeaderContainer, HeaderItem, HeaderUl, HeaderLi } from './Animations';
+import {
+    HeaderContainer,
+    HeaderItem,
+    HeaderUl,
+    HeaderLi,
+    HeaderLogo,
+    HeaderLogoG,
+} from './Animations';
 import '../styles/header.scss';
 import '../styles/_BurgerMenu.scss';
 
@@ -79,7 +86,11 @@ class Header extends PureComponent {
                     }
                     className="logo"
                 >
-                    Matt Haynes
+                    <svg width="50px" height="50px" viewBox="0 0 192 192">
+                        <HeaderLogoG id="Page-1" stroke="#000000" strokeWidth="12" fill="#fff" fillRule="evenodd">
+                            <path d="M 0 1.13686838e-13 31.1503906 1.13686838e-13 62.4804688 151.501953 92.9492188 1.13686838e-13 123.033203 1.13686838e-13 123.033203 86.3964844 169.990234 86.3964844 169.990234 1.13686838e-13 192 1.13686838e-13 192 192 169.990234 192 169.990234 106.341797 123.033203 106.341797 123.033203 192 101.802734 192 101.802734 43.7714844 72.2304688 192 51.4726562 192 20.4707031 43.7714844 20.4707031 192 0 192z"/>
+                        </HeaderLogoG>
+                    </svg>
                 </HeaderItem>
 
                 <button

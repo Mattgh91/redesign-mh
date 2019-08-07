@@ -11,6 +11,17 @@ const HeaderContainer = posed.header({
     },
 });
 
+const HeaderLogoG = posed.g({
+    notScrolled: { fill: 'rgba(255, 255, 255, 1)', },
+    scrolled: {
+        fill: 'rgba(0, 0, 0, 1)',
+        transition: {
+            duration: 1000,
+            delay: 1250,
+        }
+    }
+});
+
 const HeaderUl = posed.ul({
     show: {
         backgroundColor: '#111432',
@@ -203,6 +214,7 @@ const ContactFormSubmitComplete = posed.div({
 
 export {
     HeaderContainer,
+    HeaderLogoG,
     HeaderItem,
     HeaderUl,
     HeaderLi,

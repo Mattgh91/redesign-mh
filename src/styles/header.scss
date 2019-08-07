@@ -52,11 +52,25 @@ header {
         }
     }
 
+    svg {
+        max-height: 50px;
+    }
+
+    path {
+        transition: 2.5s ease stroke-dashoffset;
+        stroke-dasharray: 2000px;
+        stroke-dashoffset: 2000px;
+    }
+
     &.scrolled {
         a {
             &:after {
                 background: $blue;
             }
+        }
+
+        path {
+             stroke-dashoffset: 1px;
         }
     }
 
