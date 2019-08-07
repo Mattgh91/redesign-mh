@@ -97,13 +97,13 @@ class Header extends PureComponent {
                     onClick={this.toggleMenu}
                 >
                     <div className="hamburger">
-                        <span> </span>
-                        <span> </span>
-                        <span> </span>
+                        <span />
+                        <span />
+                        <span />
                     </div>
                     <div className="cross">
-                        <span> </span>
-                        <span> </span>
+                        <span />
+                        <span />
                     </div>
                     <span className="vh">Toggle Menu</span>
                 </button>
