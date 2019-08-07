@@ -4,7 +4,7 @@
  * "Borrowed" from https://hackernoon.com/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2
  *
  * @author  Matt Haynes <matthew.haynes@joipolloi.com>
- * @package Love Productions
+ * @package Matt Haynes - Personal site
  */
 
 const EnableTabbing = () => {
