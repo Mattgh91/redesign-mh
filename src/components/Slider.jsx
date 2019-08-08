@@ -1,17 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 import '../styles/slider.scss';
 
 const Slider = ({ slides }) => {
-    const [curr, setCurr] = React.useState(0);
+    const [curr, setCurr] = useState(0);
     const { length } = slides;
 
     const goToNext = () => {
         setCurr(curr === length - 1 ? 0 : curr + 1);
     };
 
-    React.useEffect(() => {
+    useEffect(() => {
         setTimeout(goToNext, 7500);
         return function() {
             clearTimeout(goToNext);

@@ -89,29 +89,6 @@ const Box = posed.div({
     },
 });
 
-const QuoteContainer = posed.div({
-    hidden: {
-        opacity: 0,
-        scale: 0,
-        transition: {
-            duration: 650,
-            delay: 50,
-        },
-    },
-    visible: {
-        opacity: 1,
-        scale: 1,
-        transition: {
-            duration: 650,
-            delay: 50,
-        },
-    },
-});
-
-const Quote = posed.h3({
-
-});
-
 const ClientItem = posed.img({
     init: {
         opacity: 0,
@@ -135,14 +112,9 @@ const ClientItem = posed.img({
 const ContactInput = posed.input({
     focusable: true,
     init: {
-        // outlineWidth: '0px',
-        // outlineOffset: '0px',
         boxShadow: '0px 0px 5px 0px rgba(8, 128, 165, 0)',
     },
     focus: {
-        // outlineWidth: '6px',
-        // outlineOffset: '3px',
-        // outlineColor: '#0980A5',
         boxShadow: '0px 0px 5px 0px rgb(8, 128, 165)',
     }
 });
@@ -150,14 +122,9 @@ const ContactInput = posed.input({
 const ContactTextArea = posed.textarea({
     focusable: true,
     init: {
-        // outlineWidth: '0px',
-        // outlineOffset: '0px',
         boxShadow: '0px 0px 5px 0px rgba(8, 128, 165, 0)',
     },
     focus: {
-        // outlineWidth: '6px',
-        // outlineOffset: '3px',
-        // outlineColor: '#0980A5',
         boxShadow: '0px 0px 5px 0px rgb(8, 128, 165)',
     }
 });
@@ -204,7 +171,7 @@ const ContactFormSubmitComplete = posed.div({
         },
    },
     submitted: {
-        height: 352,
+        height: '100%',
         applyAtStart: { display: 'flex' },
         transition: {
             duration: 500,
@@ -219,8 +186,6 @@ export {
     HeaderUl,
     HeaderLi,
     Box,
-    QuoteContainer,
-    Quote,
     ClientItem,
     ContactInput,
     ContactTextArea,
