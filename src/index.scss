@@ -69,8 +69,8 @@ code {
 
 @font-face {
     font-family: 'Lato';
-    font-display: auto;
     src: url('/assets/fonts/Lato-Regular.ttf');
+    font-display: fallback;
 }
 
 $LatoRegular: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -79,8 +79,8 @@ sans-serif;
 
 @font-face {
     font-family: 'Lato-Light';
-    font-display: auto;
-    src: url('/assets/fonts/Lato-Light.ttf')
+    src: url('/assets/fonts/Lato-Light.ttf');
+    font-display: fallback;
 }
 
 $LatoLight: Lato-Light, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
