@@ -25,6 +25,7 @@ const clientItem = {
         opacity: 0,
         transition: {
             duration: .4,
+            delay: i * .15,
         },
     }),
 };
