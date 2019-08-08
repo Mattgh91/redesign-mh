@@ -93,6 +93,14 @@ class Header extends PureComponent {
                     isScrolled: false,
                 })
             }
+        }, { passive: true });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 1024) {
+                this.setState({
+                    showNav: false,
+                });
+            }
         });
     }
 
@@ -105,6 +113,7 @@ class Header extends PureComponent {
 
     componentWillUnmount() {
         window.removeEventListener('scroll', () => {});
+        window.removeEventListener('resize', () => {});
     }
 
     render() {
