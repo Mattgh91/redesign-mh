@@ -10,7 +10,6 @@ const HeaderContainer = posed.header({
         boxShadow: '0 2px 5px rgba(0, 0, 0, 0.26)',
     },
 });
-
 const HeaderLogoG = posed.g({
     notScrolled: { fill: '#ffffff', },
     scrolled: {
@@ -21,7 +20,6 @@ const HeaderLogoG = posed.g({
         }
     }
 });
-
 const HeaderUl = posed.ul({
     show: {
         backgroundColor: '#111432',
@@ -43,7 +41,6 @@ const HeaderUl = posed.ul({
         },
     },
 });
-
 const HeaderLi = posed.li({
     show: {
         y: 0,
@@ -60,7 +57,6 @@ const HeaderLi = posed.li({
         }
     },
 });
-
 const HeaderItem = posed.a({
     notScrolled: {
         color: '#fff',
