@@ -14,17 +14,19 @@ const clientList = [
 const clientItem = {
     scrolledIntoView: i => ({
         opacity: 1,
+        y: 0,
         transition: {
-            duration: .35,
-            delay: i * .2,
+            duration: .4,
+            delay: i * .15,
         },
     }),
-    notInView: {
+    notInView: i => ({
+        y: i * 50,
         opacity: 0,
         transition: {
-            duration: .35
+            duration: .4,
         },
-    },
+    }),
 };
 
 class Clients extends Component {

@@ -1,12 +1,45 @@
 import React, { Component } from 'react';
-import {
-    ContactFormContainer,
-    ContactInput,
-    ContactTextArea,
-    ContactButton,
-    ContactFormSubmitComplete,
-} from './Animations';
+import { motion } from 'framer-motion';
 import '../styles/contact.scss';
+
+const contactFormContainer = {
+    notSubmitted: {
+        y: 0,
+        scale: 1,
+        opacity: 1,
+        display: 'block',
+        transition: {
+            duration: .75,
+        },
+    },
+    submitted: {
+        y: 35,
+        scale: 0.65,
+        opacity: 0,
+        transition: {
+            duration: .75,
+        },
+        transitionEnd: {
+            display: 'none',
+        },
+    },
+};
+const contactFormSubmitComplete = {
+    notSubmitted: {
+        height: 0,
+        display: 'none',
+        transition: {
+            duration: .75,
+        },
+    },
+    submitted: {
+        height: '100%',
+        display: 'flex',
+        transition: {
+            duration: .75,
+        },
+    },
+};
 
 const encode = (data) => {
     return Object.keys(data)
@@ -61,15 +94,16 @@ class Contact extends Component {
                 <p>Feel free to get in touch any time! I'd love to hear from you.</p>
                 <p>You can use the contact form below, or email me at <a href="mailto:mattgh9152@gmail.com">mattgh9152@gmail.com</a></p>
                 <div className="contact__outer">
-                    <ContactFormContainer
-                        pose={submitted ? 'submitted' : 'notsubmitted'}
+                    <motion.div
+                        animate={submitted ? 'submitted' : 'notSubmitted'}
+                        variants={contactFormContainer}
                         className="contact__container"
                     >
                         <form onSubmit={this.handleSubmit} className="contact__form">
                             <p className="contact__form-top">
                                 <label htmlFor="name">
                                     <span className="vh">Your Name</span>
-                                    <ContactInput
+                                    <input
                                         type="text"
                                         name="name"
                                         placeholder="Your name"
@@ -80,7 +114,7 @@ class Contact extends Component {
                                 </label>
                                 <label htmlFor="email">
                                     <span className="vh">Your Email</span>
-                                    <ContactInput
+                                    <input
                                         type="email"
                                         name="email"
                                         placeholder="Your Email"
@@ -93,7 +127,7 @@ class Contact extends Component {
                             <p>
                                 <label htmlFor="subject">
                                     <span className="vh">Subject</span>
-                                    <ContactInput
+                                    <input
                                         type="subject"
                                         name="subject"
                                         placeholder="Subject"
@@ -105,7 +139,7 @@ class Contact extends Component {
                             <p>
                                 <label htmlFor="message">
                                     <span className="vh">Message</span>
-                                    <ContactTextArea
+                                    <textarea
                                         name="message"
                                         placeholder="Message"
                                         required
@@ -115,16 +149,25 @@ class Contact extends Component {
                                 </label>
                             </p>
                             <p>
-                                <ContactButton type="submit">Send</ContactButton>
+                                <motion.button
+                                    type="submit"
+                                    whileHover={{
+                                        backgroundColor: 'rgba(9, 128, 165, 1)',
+                                        boxShadow: '0px 5px 10px rgba(0,0,0,0.2)'
+                                    }}
+                                >
+                                    Send
+                                </motion.button>
                             </p>
                         </form>
-                    </ContactFormContainer>
-                    <ContactFormSubmitComplete
-                        pose={submitted ? 'submitted' : 'notsubmitted'}
+                    </motion.div>
+                    <motion.div
+                        animate={submitted ? 'submitted' : 'notSubmitted'}
+                        variants={contactFormSubmitComplete}
                         className="contact__submitted"
                     >
                         <p>Thanks for getting in touch! I'll get back to you as soon as I can.</p>
-                    </ContactFormSubmitComplete>
+                    </motion.div>
                 </div>
             </section>
         );

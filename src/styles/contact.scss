@@ -30,6 +30,10 @@
         justify-content: center;
         align-items: center;
         color: #fff;
+
+        p {
+            margin-bottom: 0;
+        }
     }
 
     &__form {
@@ -47,12 +51,14 @@
         input,
         textarea {
             border: 1px solid $blue;
-            box-shadow: none;
             padding: 10px 7.5px;
             max-width: 100%;
+            box-shadow: 0 0 5px 0 rgba(8, 128, 165, 0);
+            transition: .4s ease box-shadow;
 
             &:focus {
                 outline-style: outset;
+                box-shadow: 0 0 5px 0 rgb(8, 128, 165);
             }
         }
 

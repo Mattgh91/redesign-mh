@@ -83,7 +83,6 @@ const Box = posed.div({
         },
     },
 });
-
 const ClientItem = posed.img({
     init: {
         opacity: 0,
@@ -103,7 +102,6 @@ const ClientItem = posed.img({
     },
     props: { i: 0 },
 });
-
 const ContactInput = posed.input({
     focusable: true,
     init: {
@@ -113,7 +111,6 @@ const ContactInput = posed.input({
         boxShadow: '0px 0px 5px 0px rgb(8, 128, 165)',
     }
 });
-
 const ContactTextArea = posed.textarea({
     focusable: true,
     init: {
@@ -123,7 +120,6 @@ const ContactTextArea = posed.textarea({
         boxShadow: '0px 0px 5px 0px rgb(8, 128, 165)',
     }
 });
-
 const ContactButton = posed.button({
     hoverable: true,
     init: {
@@ -135,7 +131,6 @@ const ContactButton = posed.button({
         boxShadow: '0px 5px 10px rgba(0,0,0,0.2)'
     }
 });
-
 const ContactFormContainer = posed.div({
     notsubmitted: {
         y: 0,
@@ -156,7 +151,6 @@ const ContactFormContainer = posed.div({
         },
     },
 });
-
 const ContactFormSubmitComplete = posed.div({
    notsubmitted: {
        height: 0,
