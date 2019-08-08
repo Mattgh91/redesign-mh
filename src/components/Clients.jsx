@@ -21,11 +21,11 @@ const clientItem = {
         },
     }),
     notInView: i => ({
-        y: i * 50,
+        y: i * 25,
         opacity: 0,
         transition: {
             duration: .4,
-            delay: i * .15,
+            delay: 0,
         },
     }),
 };
