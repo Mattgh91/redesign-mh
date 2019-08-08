@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { ClientItem } from './Animations';
-import { PoseGroup } from 'react-pose';
+import { motion } from 'framer-motion';
 import '../styles/clients.scss';
 
 const clientList = [
@@ -11,6 +10,22 @@ const clientList = [
     { src: '/assets/ScienceMuseum.svg', alt: 'Science Museum', id: 5 },
     { src: '/assets/MuseumsSheffield.svg', alt: 'Museums Sheffield', id: 6 },
 ];
+
+const clientItem = {
+    scrolledIntoView: i => ({
+        opacity: 1,
+        transition: {
+            duration: .35,
+            delay: i * .2,
+        },
+    }),
+    notInView: {
+        opacity: 0,
+        transition: {
+            duration: .35
+        },
+    },
+};
 
 class Clients extends Component {
     constructor(props) {
@@ -56,21 +71,20 @@ class Clients extends Component {
                 <h3>People I've worked with</h3>
                 <p>I've selected a few clients I've had the pleasure of working with</p>
                 <div className="clients__list" ref={this.clientListDiv}>
-                    <PoseGroup>
-                        {clientList.map(client => (
-                            <div key={client.id} className={`clients__container  clients__container_${client.id}`}>
-                                <ClientItem
-                                    i={client.id}
-                                    src={client.src}
-                                    alt={client.alt}
-                                    pose={quoteVisible ? 'scrolledIntoView' : 'notInView'}
-                                    initialPose="notInView"
-                                    className="clients__client"
-                                />
-                                <div className="vh">{client.alt}</div>
-                            </div>
-                        ))}
-                    </PoseGroup>
+                    {clientList.map(client => (
+                        <div key={client.id} className={`clients__container  clients__container_${client.id}`}>
+                            <motion.img
+                                custom={client.id}
+                                src={client.src}
+                                alt={client.alt}
+                                variants={clientItem}
+                                animate={quoteVisible ? 'scrolledIntoView' : 'notInView'}
+                                initial={false}
+                                className="clients__client"
+                            />
+                            <div className="vh">{client.alt}</div>
+                        </div>
+                    ))}
                 </div>
             </section>
         );

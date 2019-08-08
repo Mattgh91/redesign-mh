@@ -65,7 +65,6 @@ const HeaderItem = posed.a({
         color: '#0980A5',
     },
 });
-
 const Box = posed.div({
     hidden: {
         opacity: 0,
