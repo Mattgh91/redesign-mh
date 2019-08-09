@@ -146,7 +146,7 @@ class Header extends PureComponent {
                 className={isScrolled ? 'scrolled' : 'notScrolled'}
             >
                 <motion.a
-                    href="#"
+                    href="#topHome"
                     variants={headerItem}
                     animate={isScrolled ? 'scrolled' : 'notScrolled'}
                     onClick={
