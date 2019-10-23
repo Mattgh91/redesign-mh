@@ -99,7 +99,7 @@ class Contact extends Component {
                         variants={contactFormContainer}
                         className="contact__container"
                     >
-                        <form onSubmit={this.handleSubmit} className="contact__form" dataNetlifyRecaptcha="true">
+                        <form onSubmit={this.handleSubmit} className="contact__form">
                             <p className="contact__form-top">
                                 <label htmlFor="name">
                                     <span className="vh">Your Name</span>
@@ -148,7 +148,6 @@ class Contact extends Component {
                                     />
                                 </label>
                             </p>
-                            <div dataNetlifyRecaptcha="true" />
                             <p>
                                 <motion.button
                                     type="submit"
