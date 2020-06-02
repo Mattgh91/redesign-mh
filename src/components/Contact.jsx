@@ -136,6 +136,9 @@ class Contact extends Component {
                                     />
                                 </label>
                             </p>
+                            <p className="vh">
+                                <label>Don’t fill this out if you're human: <input name="bot-field"/></label>
+                            </p>
                             <p>
                                 <label htmlFor="message">
                                     <span className="vh">Message</span>
