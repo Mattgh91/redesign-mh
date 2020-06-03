@@ -99,7 +99,7 @@ class Contact extends Component {
                         variants={contactFormContainer}
                         className="contact__container"
                     >
-                        <form onSubmit={this.handleSubmit} className="contact__form" netlifyhoneypot="bot-field">
+                        <form onSubmit={this.handleSubmit} className="contact__form" netlify-honeypot="bot-field">
                             <p className="contact__form-top">
                                 <label htmlFor="name">
                                     <span className="vh">Your Name</span>
