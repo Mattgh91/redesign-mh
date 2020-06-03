@@ -68,6 +68,10 @@ class Contact extends Component {
     }
 
     handleSubmit = e => {
+        e.preventDefault();
+
+        if (this.state.botField.length > 0) return false;
+
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -75,8 +79,6 @@ class Contact extends Component {
         })
             .then(() => this.setState({ submitted: true }))
             .catch(error => alert(error));
-
-        e.preventDefault();
     };
 
     handleChange = e => this.setState({ [e.target.name]: e.target.value });
