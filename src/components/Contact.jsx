@@ -57,6 +57,7 @@ class Contact extends Component {
             email: "",
             subject: "",
             message: "",
+            botField: "",
             submitted: false,
         };
     }
@@ -86,6 +87,7 @@ class Contact extends Component {
             email,
             subject,
             message,
+            botField,
             submitted
         } = this.state;
         return (
@@ -137,7 +139,14 @@ class Contact extends Component {
                                 </label>
                             </p>
                             <p className="vh">
-                                <label>Don’t fill this out if you're human: <input name="bot-field" /> </label>
+                                <label>
+                                    Don’t fill this out if you're human:
+                                    <input
+                                        name="bot-field"
+                                        value={botField}
+                                        onChange={this.handleChange}
+                                    />
+                                </label>
                             </p>
                             <p>
                                 <label htmlFor="message">
